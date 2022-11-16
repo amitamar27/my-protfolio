@@ -1,0 +1,162 @@
+.project-container {
+    min-height: calc(100vh - 160px);
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 45px;
+    font-family: 'Lato',
+        sans-serif;
+    padding-bottom: 40px;
+
+    .title {
+        font-size: 1.17rem;
+        font-weight: bold;
+        font-family: system-ui;
+        font-style: italic;
+        color: #e4e4e4;
+        background-color: rgba(45, 45, 45, 0.84);
+        padding: 10px;
+        letter-spacing: 0.3125rem;
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .category-txt {
+        text-align: center;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 40px;
+        justify-items: center;
+
+    }
+
+    .card {
+        position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        max-width: 290px;
+        height: 351px;
+        background-color: #d4d4d4;
+
+        img {
+            width: 100%;
+            height: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        .container {
+            padding: 24px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            .proj-name {
+                font-size: 22px;
+                font-weight: bold;
+                font-family: 'Lora', serif;
+                margin-bottom: 8px;
+                letter-spacing: 2px;
+                color: #2f2f2f;
+
+            }
+
+            p {
+                margin-bottom: 8px;
+                color: #2f2f2f;
+                font-size: 14px;
+            }
+
+            .techs {
+                font-size: 1rem;
+                font-weight: bold;
+                font-family: 'Lora',
+                    serif;
+                margin-bottom: 8px;
+                line-height: 21px;
+                color: #2f2f2f;
+            }
+
+            .onHoverDiv {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background-color: #363636a3;
+                overflow: hidden;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0;
+                transition: .5s ease;
+
+                .go-git {
+                    height: 33px;
+                    width: 33px;
+                    background-color: #121212;
+                    border-radius: 50%;
+                    display: flex;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    .highlight {
+                        color: #f1f1f1;
+                        display: block;
+                        margin: auto;
+                        font-size: 19px;
+
+                    }
+
+
+                }
+            }
+
+            button {
+
+                cursor: pointer;
+                z-index: 2;
+                padding: 5px 17px 5px 17px;
+                background-color: #121212;
+                color: white;
+                font-size: 14px;
+                border-radius: 3px;
+                transition: all 0.3s ease-in-out;
+                border: 1px solid gray;
+            }
+        }
+    }
+
+    .card:hover .onHoverDiv {
+        height: 25%;
+    }
+
+    .filter {
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 7px;
+    }
+}
+
+
+@media screen and (max-width:985px) {
+    .project-container .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 2em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .project-container .cards-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px 2em;
+    }
+}
