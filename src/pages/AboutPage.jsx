@@ -32,7 +32,7 @@ export function AboutPage() {
         <h2>ABOUT ME</h2>
         <p>
           My name is Amit Amar, Full Stack Developer from Tel-Aviv Israel. I’m
-          currently looking for my first role, I have a big passion for
+          currently looking for my next role, I have a big passion for
           programming and creating web application end to end from scratch using
           the latest web technologies and frameworks. I’m an autodidact serious
           and hardworking person, paying attention the small details, and big
